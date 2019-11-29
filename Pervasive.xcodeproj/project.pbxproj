@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C16BB49238ECD2F008079FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C16BB48238ECD2F008079FE /* GoogleService-Info.plist */; };
+		0C16BB4B238EDCDB008079FE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C16BB4A238EDCDB008079FE /* Constants.swift */; };
 		0CDA834E2360C2A700F5D00D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA834D2360C2A700F5D00D /* AppDelegate.swift */; };
 		0CDA83502360C2A700F5D00D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA834F2360C2A700F5D00D /* SceneDelegate.swift */; };
 		0CDA83522360C2A700F5D00D /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA83512360C2A700F5D00D /* ShoppingCartViewController.swift */; };
@@ -17,9 +19,12 @@
 		0CDA83642360D3A100F5D00D /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA83632360D3A100F5D00D /* ShoppingItem.swift */; };
 		0CDA83672360D93A00F5D00D /* ShoppingItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA83652360D93A00F5D00D /* ShoppingItemTableViewCell.swift */; };
 		0CDA83682360D93A00F5D00D /* ShoppingItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CDA83662360D93A00F5D00D /* ShoppingItemTableViewCell.xib */; };
+		9513D5282351E0D25B66DED6 /* Pods_Pervasive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7A3F9C3D3E5614C1F4C45E /* Pods_Pervasive.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C16BB48238ECD2F008079FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0C16BB4A238EDCDB008079FE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0CDA834A2360C2A700F5D00D /* Pervasive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pervasive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CDA834D2360C2A700F5D00D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CDA834F2360C2A700F5D00D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +37,9 @@
 		0CDA83632360D3A100F5D00D /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		0CDA83652360D93A00F5D00D /* ShoppingItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemTableViewCell.swift; sourceTree = "<group>"; };
 		0CDA83662360D93A00F5D00D /* ShoppingItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingItemTableViewCell.xib; sourceTree = "<group>"; };
+		2103B7C4B9DC3AF8CEFAA37B /* Pods-Pervasive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pervasive.debug.xcconfig"; path = "Target Support Files/Pods-Pervasive/Pods-Pervasive.debug.xcconfig"; sourceTree = "<group>"; };
+		BA7A3F9C3D3E5614C1F4C45E /* Pods_Pervasive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pervasive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2CF7E6B08357D70CF5E6DC1 /* Pods-Pervasive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pervasive.release.xcconfig"; path = "Target Support Files/Pods-Pervasive/Pods-Pervasive.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9513D5282351E0D25B66DED6 /* Pods_Pervasive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +59,8 @@
 			children = (
 				0CDA834C2360C2A700F5D00D /* Pervasive */,
 				0CDA834B2360C2A700F5D00D /* Products */,
+				4DD138F795A8823BBF5DF049 /* Pods */,
+				7454FD50AF1F944D7167F243 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +75,7 @@
 		0CDA834C2360C2A700F5D00D /* Pervasive */ = {
 			isa = PBXGroup;
 			children = (
+				0C16BB48238ECD2F008079FE /* GoogleService-Info.plist */,
 				0CDA834D2360C2A700F5D00D /* AppDelegate.swift */,
 				0CDA834F2360C2A700F5D00D /* SceneDelegate.swift */,
 				0CDA83712360EA8300F5D00D /* View */,
@@ -106,9 +118,27 @@
 		0CDA83742360EAA500F5D00D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0C16BB4A238EDCDB008079FE /* Constants.swift */,
 				0CDA83632360D3A100F5D00D /* ShoppingItem.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		4DD138F795A8823BBF5DF049 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2103B7C4B9DC3AF8CEFAA37B /* Pods-Pervasive.debug.xcconfig */,
+				E2CF7E6B08357D70CF5E6DC1 /* Pods-Pervasive.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7454FD50AF1F944D7167F243 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA7A3F9C3D3E5614C1F4C45E /* Pods_Pervasive.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CDA835E2360C2BA00F5D00D /* Build configuration list for PBXNativeTarget "Pervasive" */;
 			buildPhases = (
+				85C680E6D1965CA78983A352 /* [CP] Check Pods Manifest.lock */,
 				0CDA83462360C2A700F5D00D /* Sources */,
 				0CDA83472360C2A700F5D00D /* Frameworks */,
 				0CDA83482360C2A700F5D00D /* Resources */,
+				4FBE1B90D529446484CD43FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C16BB49238ECD2F008079FE /* GoogleService-Info.plist in Resources */,
 				0CDA83682360D93A00F5D00D /* ShoppingItemTableViewCell.xib in Resources */,
 				0CDA835A2360C2BA00F5D00D /* LaunchScreen.storyboard in Resources */,
 				0CDA83572360C2BA00F5D00D /* Assets.xcassets in Resources */,
@@ -177,6 +210,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FBE1B90D529446484CD43FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pervasive/Pods-Pervasive-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pervasive/Pods-Pervasive-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pervasive/Pods-Pervasive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85C680E6D1965CA78983A352 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pervasive-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0CDA83462360C2A700F5D00D /* Sources */ = {
@@ -187,6 +262,7 @@
 				0CDA834E2360C2A700F5D00D /* AppDelegate.swift in Sources */,
 				0CDA83672360D93A00F5D00D /* ShoppingItemTableViewCell.swift in Sources */,
 				0CDA83622360D34800F5D00D /* ShoppingItemListTableViewController.swift in Sources */,
+				0C16BB4B238EDCDB008079FE /* Constants.swift in Sources */,
 				0CDA83642360D3A100F5D00D /* ShoppingItem.swift in Sources */,
 				0CDA83502360C2A700F5D00D /* SceneDelegate.swift in Sources */,
 			);
@@ -330,6 +406,7 @@
 		};
 		0CDA835F2360C2BA00F5D00D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2103B7C4B9DC3AF8CEFAA37B /* Pods-Pervasive.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -348,6 +425,7 @@
 		};
 		0CDA83602360C2BA00F5D00D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2CF7E6B08357D70CF5E6DC1 /* Pods-Pervasive.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
