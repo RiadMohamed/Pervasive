@@ -19,6 +19,4 @@ class ShoppingItem {
         self.title = title
         self.price = price
     }
-    
-    
 }

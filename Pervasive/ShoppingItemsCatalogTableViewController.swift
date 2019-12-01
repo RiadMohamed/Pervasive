@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ShoppingItemListTableViewController: UITableViewController {
+class ShoppingItemsCatalogTableViewController: UITableViewController {
     
     var shoppingItemsList: [ShoppingItem] = []
     let db = Firestore.firestore()
@@ -30,7 +30,7 @@ class ShoppingItemListTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        tableView.register(UINib(nibName: "ShoppingItemTableViewCell", bundle: nil), forCellReuseIdentifier: "shoppingItemCell")
+        tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
         tableView.separatorStyle = .singleLine
 //        defaultInit()
         loadFromDatabase()
@@ -77,23 +77,23 @@ class ShoppingItemListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "shoppingItemCell", for: indexPath) as! ShoppingItemTableViewCell
         cell.itemImage.image = shoppingItemsList[indexPath.row].image
         cell.titleLabel.text = shoppingItemsList[indexPath.row].title
-        cell.priceLabel.text = shoppingItemsList[indexPath.row].price.description
+        cell.priceLabel.text = "$\(shoppingItemsList[indexPath.row].price)"
 
         // TODO: Configure the cell...
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goToShoppingCart", sender: indexPath)
+//        performSegue(withIdentifier: "goToShoppingCart", sender: indexPath)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToShoppingCart" {
-            if let destVC = segue.destination as? ShoppingCartViewController, let indexPath = sender as? IndexPath {
-                let item = shoppingItemsList[indexPath.row]
-                destVC.shoppingItem = item
-            }
-        }
+//        if segue.identifier == "goToShoppingCart" {
+//            if let destVC = segue.destination as? ShoppingCartViewController, let indexPath = sender as? IndexPath {
+//                let item = shoppingItemsList[indexPath.row]
+//                destVC.shoppingItem = item
+//            }
+//        }
     }
 
 }

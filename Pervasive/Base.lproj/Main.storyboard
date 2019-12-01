@@ -1,78 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pRd-uY-e94">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="faP-R6-rFG">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Shopping Item List Table View Controller-->
+        <!--Shopping Orders Table View Controller-->
+        <scene sceneID="xlT-KP-IAT">
+            <objects>
+                <tableViewController id="9hh-Ds-N7T" customClass="ShoppingOrdersTableViewController" customModule="Pervasive" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lz6-aI-8sL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="9hh-Ds-N7T" id="opY-ae-59f"/>
+                            <outlet property="delegate" destination="9hh-Ds-N7T" id="Ue9-53-6r4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="1oe-um-moc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Hv-Gb-X1L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-689" y="125"/>
+        </scene>
+        <!--Shopping Items Catalog Table View Controller-->
         <scene sceneID="fQk-go-HQ0">
             <objects>
-                <tableViewController id="pRd-uY-e94" customClass="ShoppingItemListTableViewController" customModule="Pervasive" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="pRd-uY-e94" customClass="ShoppingItemsCatalogTableViewController" customModule="Pervasive" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PUV-UI-qFZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShoppingItemTableViewCell" id="8vO-Yp-GC0">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8vO-Yp-GC0" id="s5L-Jz-23V">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="goToShoppingCart" id="Hwe-6s-hIh"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="pRd-uY-e94" id="4tT-nw-fGW"/>
                             <outlet property="delegate" destination="pRd-uY-e94" id="cDe-rB-NgM"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="IYW-TU-7Vr">
+                        <barButtonItem key="leftBarButtonItem" title="My Orders" id="Dvw-rc-f9v">
+                            <connections>
+                                <segue destination="9hh-Ds-N7T" kind="show" identifier="showOrdersSegue" id="7Px-QZ-nVM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="My Cart" id="hUV-fq-wwf">
+                            <connections>
+                                <segue destination="X3V-Dk-Rw2" kind="show" identifier="showCartSegue" id="X27-YX-Bq8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZ4-ta-AD9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-690.39999999999998" y="125.4872563718141"/>
+            <point key="canvasLocation" x="169" y="125"/>
         </scene>
-        <!--Shopping Cart View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Table View Controller-->
+        <scene sceneID="ywW-Ze-ENi">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ShoppingCartViewController" customModule="Pervasive" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                <tableViewController id="X3V-Dk-Rw2" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="i2i-nS-bva">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svh-gj-gEi">
-                                <rect key="frame" x="117" y="217" width="142" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaG-uf-9eG">
-                                <rect key="frame" x="117" y="313" width="142" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="dbR-RO-EZm"/>
-                    <connections>
-                        <outlet property="priceLabel" destination="zaG-uf-9eG" id="gkf-AS-fG9"/>
-                        <outlet property="titleLabel" destination="svh-gj-gEi" id="aca-6a-5LW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <connections>
+                            <outlet property="dataSource" destination="X3V-Dk-Rw2" id="X8D-W2-34h"/>
+                            <outlet property="delegate" destination="X3V-Dk-Rw2" id="lCp-5b-uPT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="TYs-hB-7KE"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hbt-Jz-XAU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="126.38680659670166"/>
+            <point key="canvasLocation" x="996" y="125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6gx-Qm-bUQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="faP-R6-rFG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tw1-Rt-mWF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pRd-uY-e94" kind="relationship" relationship="rootViewController" id="vtO-c7-bOE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NxB-Xj-Imi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="169" y="-650"/>
         </scene>
     </scenes>
 </document>

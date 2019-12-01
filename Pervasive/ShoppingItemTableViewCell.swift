@@ -19,5 +19,4 @@ class ShoppingItemTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
 }
